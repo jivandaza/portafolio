@@ -50,7 +50,15 @@ const Navbar = () => {
                     </p>
                 </Link>
 
-                <ul className='list-none hidden sm:flex flex-row gap-10'>
+                <ul className='list-none hidden sm:flex flex-row items-center gap-10'>
+                    <li key={'descargar-cv'}>
+                        <button
+                            className={'bg-[#915EFF] py-1 px-3 rounded-full hover:cursor-pointer hover:bg-[#7233FB]'}
+                            onClick={() => window.open('curriculum-vitae.pdf')}
+                        >
+                            Descargar CV
+                        </button>
+                    </li>
                     {navLinks.map((nav) => (
                         <li
                             key={nav.id}
