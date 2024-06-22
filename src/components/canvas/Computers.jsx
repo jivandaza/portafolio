@@ -10,7 +10,11 @@ const Computers = ({ isMobile }) => {
 
     return (
         <mesh>
-            <hemisphereLight intensity={0.15} groundColor='black' />
+            {/* Agrega una luz ambiental para iluminación base */}
+            <ambientLight intensity={0.5} />
+            {/* Luz hemisférica */}
+            <hemisphereLight intensity={0.35} groundColor='black' />
+            {/* Luz de foco */}
             <spotLight
                 position={[-20, 50, 10]}
                 angle={0.12}
@@ -19,7 +23,9 @@ const Computers = ({ isMobile }) => {
                 castShadow
                 shadow-mapSize={1024}
             />
-            <pointLight intensity={1} />
+            {/* Luz puntual */}
+            <pointLight intensity={1} position={[10, 10, 10]} />
+            {/* Modelo 3D */}
             <primitive
                 object={computer.scene}
                 scale={isMobile ? 0.7 : 0.75}
