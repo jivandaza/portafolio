@@ -86,6 +86,14 @@ const Navbar = () => {
                         } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
                     >
                         <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
+                            <li key={'descargar-cv'}>
+                                <button
+                                    className={'bg-[#915EFF] py-1 px-3 rounded-full hover:cursor-pointer hover:bg-[#7233FB]'}
+                                    onClick={() => window.open('curriculum-vitae.pdf')}
+                                >
+                                    Descargar CV
+                                </button>
+                            </li>
                             {navLinks.map((nav) => (
                                 <li
                                     key={nav.id}
